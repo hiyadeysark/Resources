@@ -35,20 +35,28 @@ loginForm.addEventListener('submit', (e) => {
     const password = loginForm['login-password'].value;
 
 
-    auth.signInWithEmailAndPassword(email, password).then(cred => {
-        auth.onAuthStateChanged(function(user) {
-            if(user) {
-                //user is signed in
-                console.log('logged in');
-                window.location = 'loggedin.html';
-            }
-            else {
-                //user is signed out
-                console.log('not logged in');
-                window.location = 'index.html';
-            }
+    auth.signInWithEmailAndPassword(email, password)
+        .then(cred => {
+            auth.onAuthStateChanged(function(user) {
+                if(user) {
+                    //user is signed in
+                    console.log('logged in');
+                    window.location = 'loggedin.html';
+                }
+                else {
+                    //user is signed out
+                    console.log('not logged in');
+                    window.location = 'index.html';
+                }
+            });
+        })
+        .catch(function(error){
+            //handle errors here
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            
+            window.alert("Error: " + errorMessage);
         });
-    });
 });
 
 
