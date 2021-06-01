@@ -9,15 +9,6 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
-
+	
 console.log(5);
 
-// Prevent login and register buttons from throwing an error in codepen
-const buttons = document.querySelectorAll('.form-container button')
-
-buttons[0].addEventListener('click' , (e) => {
-	e.preventDefault()
-});
-buttons[1].addEventListener('click' , (e) => {
-	e.preventDefault()
-});
