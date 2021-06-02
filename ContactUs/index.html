@@ -9,15 +9,43 @@
         <div class="contact-section">
             <h1>Contact Us</h1>
             <div class="border"></div>
-            <form class="contact-form" action="index.html" method="post">
-              <input type="text" class="contact-form-text" placeholder="Your name">
-              <input type="email" class="contact-form-text" placeholder="Your email">
-              <input type="text" class="contact-form-text" placeholder="Your phone">
-              <textarea class="contact-form-text" placeholder="Your message"></textarea>
-              <input type="submit" class="contact-form-btn" value="Send">
+            <form class="contact-form" action="index.html" method="post" id="contactForm" required>
+              <input type="text" class="contact-form-text" placeholder="Your name" id="name" required>
+              <input type="email" class="contact-form-text" placeholder="Your email" id="email" required>
+              <input type="text" class="contact-form-text" placeholder="Your phone" id="phone" required>
+              <textarea class="contact-form-text" placeholder="Your message" id="message" required></textarea>
+              <button class="contact-form-btn">Send</button>
             </form>
           </div>
         
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBmN5cfpWxnfmdlvtgFTBPBYfrAXbIKTuA",
+            authDomain: "contact-form-e5623.firebaseapp.com",
+            projectId: "contact-form-e5623",
+            storageBucket: "contact-form-e5623.appspot.com",
+            messagingSenderId: "262741898631",
+            appId: "1:262741898631:web:0563d07381a0c7bdc90f22"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //reference messages collection
+        var messagesRef = firebase.database().ref('messages');
+
+        </script>
+
+        <script src="main.js"></script>
 
     </body>
 </html>
