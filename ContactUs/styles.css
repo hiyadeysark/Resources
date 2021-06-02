@@ -59,4 +59,10 @@
   .contact-form-btn:hover{
     background: #2980b9;
   }
+
+  .alert{
+      text-align: center;
+      color: white;
+      
+  }
   
