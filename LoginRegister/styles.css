@@ -17,6 +17,18 @@ h1 {
   font-weight: 300;
 }
 
+.links {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  margin: 20px;
+}
+
+.links:hover{
+  text-decoration: none;
+  color: salmon;
+}
+
 form {
   background-color: #fff;
   display: flex;
