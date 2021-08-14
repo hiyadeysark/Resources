@@ -27,7 +27,7 @@ h1 {
 
 .links:hover{
   text-decoration: none;
-  color: salmon;
+  color: #f38887;
 }
 
 form {
@@ -56,7 +56,7 @@ button {
 }
 button:hover {
   background: #fff;
-  color: salmon;
+  color: #787685;
 }
 button:active {
   transform: scale(0.95);
@@ -107,13 +107,13 @@ input::placeholder {
 }
 
 .form-container button {
-  background: salmon;
-  border: 1px solid salmon;
+  background: #f36c6c;
+  border: 1px solid #f36c6c;
   color: #fff;
 }
 .form-container button:hover {
   background: transparent;
-  color: salmon;
+  color: #eb7775;
 }
 
 .container.right-panel-active .sign-in-container {
@@ -136,7 +136,7 @@ input::placeholder {
   z-index: 100;
 }
 .overlay-container .overlay {
-  background: linear-gradient(-45deg, #c24f42, salmon, #fc9c92);
+  background: linear-gradient(-30deg, #f5a5a3, #f38887,#f79997);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -301,7 +301,7 @@ input::placeholder {
 }
 .button:hover {
   background: #fff;
-  color: salmon;
+  color: #f5a5a3;
 }
 .button:active {
   transform: scale(0.95);

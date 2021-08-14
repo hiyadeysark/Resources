@@ -33,6 +33,4 @@ forgetForm.addEventListener('submit', (e) => {
         window.alert("Enter your email id first");
     }
 
-
-
 });
